@@ -12,7 +12,7 @@ function createSvg(id: number) {
     let $e = document.createElementNS(NS, 'svg');
     $e.setAttributeNS(null, 'id', 'svg' + id);
     $e.setAttributeNS(null, 'style', 'width: 100%; display: inline-block');
-    $e.setAttributeNS(null, 'viewBox', '75 4 557 502');
+    $e.setAttributeNS(null, 'viewBox', '0 0 1000 1000');
 
     return $e;
 }
@@ -49,11 +49,10 @@ function getCubicBezierPathStr(ps: number[][]) {
  * The SVG path string representing our shape.
  */
 const svgPathStr = `
-        M 10 10 
-        C 10 10 990 10 990 10 
-        C 990 10 990 990 990 990 
-        C 990 990 10 990 10 990 
-        C 10 990 10 990 10 10 
+        M 144 251 L 444 251 
+        M 444 251 L 444 551
+        M 444 551 L 144 551
+        M 144 551 L 144 251     
         z
 `;
 
@@ -85,6 +84,7 @@ function main() {
     // We could also just give an array of linear, quadratic or cubic beziers as 
     // below (all lines in this case). Note that in the below case there is only
     // one array of beziers (forming a single loop shape).
+    
     /*
     bezierLoops = [
         [
