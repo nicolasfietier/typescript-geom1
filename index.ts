@@ -49,10 +49,9 @@ function getCubicBezierPathStr(ps: number[][]) {
  * The SVG path string representing our shape.
  */
 const svgPathStr = `
-        M 144 251 L 444 251 
-        M 444 251 L 444 551
-        M 444 551 L 144 551
-        M 144 551 L 144 251     
+        M 144 251 L 644 251 
+        L 644 551
+        L 144 551 
         z
 `;
 
