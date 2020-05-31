@@ -12,7 +12,7 @@ function createSvg(id: number) {
     let $e = document.createElementNS(NS, 'svg');
     $e.setAttributeNS(null, 'id', 'svg' + id);
     $e.setAttributeNS(null, 'style', 'width: 100%; display: inline-block');
-    $e.setAttributeNS(null, 'viewBox', '0 -500 2000 2000');
+    $e.setAttributeNS(null, 'viewBox', '0 -500 1000 1000');
 
     return $e;
 }
@@ -44,13 +44,21 @@ function getCubicBezierPathStr(ps: number[][]) {
     return `M${x0} ${y0} C${x1} ${y1} ${x2} ${y2} ${x3} ${y3}`;
 }
 
+/* M 100 250 L 100 -300 L 800 -300 L 800 250 z */
+/* M 200 -200 L 200 -100 L 300 -100 L 300 -200 z */
+
+/* Warning: Outer curves and inner curves must be oriented in opposite directions */
 
 /**
  * The SVG path string representing our shape.
  */
 const svgPathStr = `
-        M146 588c-64-19-85-35-85-63 0-43 50-158 133-304-34-1-63-2-80-2 8-20 47-34 108-45 105-174 240-320 349-379 1-9 2-16 2-19 37 0 138 44 143 62-44 77-90 237-118 450-7 53-12 121-12 205 0 29 0 60 2 93-3 1-4 1-12 1-37 0-107-27-114-44-1-17-1-34-1-52 0-82 6-168 20-258-37-3-129-7-213-10-32 59-61 120-81 179-22 63-37 130-41 186z
-        M532-13c5-19 13-54 20-90-67 25-166 133-249 267 56-5 120-8 191-9 10-55 23-111 38-168z
+ M 800 250 L 800 -300 L 100 -300 L 100 250 z
+ M 300 -200 L 300 -100 L 200 -100 L 200 -200 z
+M 500 -100 L 500 0 L 400 0 L 400 -100 z
+        
+     
+        
 `;
 
 
