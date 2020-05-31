@@ -77,22 +77,6 @@ function main() {
 
     // Get loops (representing the shape) from some SVG path.
     let bezierLoops = getPathsFromStr(svgPathStr);
-      
-    // We could also just give an array of linear, quadratic or cubic beziers as 
-    // below (all lines in this case). Note that in the below case there is only
-    // one array of beziers (forming a single loop shape).
-    
-    /*
-    bezierLoops = [
-        [
-            [[50.000, 95.000],[92.797, 63.905]], 
-            [[92.797, 63.905],[76.450, 13.594]],
-            [[76.450, 13.594],[23.549, 13.594]],
-            [[23.549, 13.594],[7.202,  63.90]],
-            [[7.202,  63.900],[50.000, 95.000]]
-        ]
-    ];
-    */
         
     // Get MATs from the loops.
     let mats = findMats(bezierLoops, 3);
