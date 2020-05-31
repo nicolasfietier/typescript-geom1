@@ -12,7 +12,7 @@ function createSvg(id: number) {
     let $e = document.createElementNS(NS, 'svg');
     $e.setAttributeNS(null, 'id', 'svg' + id);
     $e.setAttributeNS(null, 'style', 'width: 100%; display: inline-block');
-    $e.setAttributeNS(null, 'viewBox', '0 -500 1000 1000');
+    $e.setAttributeNS(null, 'viewBox', '0 -400 1000 1500');
 
     return $e;
 }
@@ -53,12 +53,15 @@ function getCubicBezierPathStr(ps: number[][]) {
  * The SVG path string representing our shape.
  */
 const svgPathStr = `
- M 800 250 L 800 -300 L 100 -300 L 100 250 z
+  M 800 200 L 800 -300 L 100 -300 L 100 200 z
  M 300 -200 L 300 -100 L 200 -100 L 200 -200 z
-M 500 -100 L 500 0 L 400 0 L 400 -100 z
-        
-     
-        
+ M 500 -100 L 500 0 L 400 0 L 400 -100 z
+ M 700 0 L 700 100 L 600 100 L 600 0 z
+ 
+ M 800 800 L 800 300 L 100 300 L 100 800 z
+ M 300 400 L 300 500 L 200 500 L 200 400 z
+ M 500 500 L 500 600 L 400 600 L 400 500 z
+ M 700 600 L 700 700 L 600 700 L 600 600 z   
 `;
 
 
