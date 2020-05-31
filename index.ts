@@ -44,16 +44,13 @@ function getCubicBezierPathStr(ps: number[][]) {
     return `M${x0} ${y0} C${x1} ${y1} ${x2} ${y2} ${x3} ${y3}`;
 }
 
-/* M 100 250 L 100 -300 L 800 -300 L 800 250 z */
-/* M 200 -200 L 200 -100 L 300 -100 L 300 -200 z */
-
 /* Warning: Outer curves and inner curves must be oriented in opposite directions */
 
 /**
  * The SVG path string representing our shape.
  */
 const svgPathStr = `
-  M 800 200 L 800 -300 L 100 -300 L 100 200 z
+ M 800 200 L 800 -300 L 100 -300 L 100 200 z
  M 300 -200 L 300 -100 L 200 -100 L 200 -200 z
  M 500 -100 L 500 0 L 400 0 L 400 -100 z
  M 700 0 L 700 100 L 600 100 L 600 0 z
