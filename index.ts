@@ -96,7 +96,6 @@ function main() {
     let sats = mats.map(mat => toScaleAxis(mat, 1.5));
 
     drawMats(sats, $svg, 'sat');
-
 }
 
 
