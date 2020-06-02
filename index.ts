@@ -97,22 +97,6 @@ function main() {
 
     drawMats(sats, $svg, 'sat');
 
-    // writefile.js
-
-const fs = require('fs');
-
-let text = 'This is a  test' + 
-             'to write in a file\n' + 
-             'Ok';
-
-// write to a new file named test.txt
-fs.writeFile('data/test.txt', text, (err) => {
-    // throws an error, you could also catch it here
-    if (err) throw err;
-
-    // success case, the file was saved
-    console.log('Text saved!');
-});
 }
 
 
