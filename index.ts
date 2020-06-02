@@ -96,6 +96,23 @@ function main() {
     let sats = mats.map(mat => toScaleAxis(mat, 1.5));
 
     drawMats(sats, $svg, 'sat');
+
+    // writefile.js
+
+const fs = require('fs');
+
+let text = 'This is a  test' + 
+             'to write in a file\n' + 
+             'Ok';
+
+// write to a new file named 2pac.txt
+fs.writeFile('./test.txt', text, (err) => {
+    // throws an error, you could also catch it here
+    if (err) throw err;
+
+    // success case, the file was saved
+    console.log('Text saved!');
+});
 }
 
 
